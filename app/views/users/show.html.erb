@@ -1,0 +1,16 @@
+<h1>マイページ</h1>
+
+<p>
+  <strong>名前：</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>メールアドレス：</strong>
+  <%= @user.email %>
+</p>
+
+<hr>
+
+<%= link_to "トップ画面に戻る", root_path %>
+<%= button_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo: false } %>
